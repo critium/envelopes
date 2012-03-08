@@ -1,0 +1,13 @@
+base starts from testtwo.html
+
+testtwo's envelope is envelope.html.
+testtwo's children are frag1.html and frag2.html
+
+frag1's envelope is div.html
+
+so it should render as
+
+envelope
+-> testtwo
+-> frag1 <- div
+-> frag2
