@@ -1,0 +1,12 @@
+version: 
+. 0.1 
+
+name:
+. node envelopes 
+
+description:
+. simple batch templating tool.
+
+future:
+. convert to work with express as middleware.
+. convert to streaming
