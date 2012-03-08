@@ -1,6 +1,6 @@
 //Welcome to the zoo!
 
-var src = '';
+var src = './test';
 
 var Lazy   = require('lazy');
 var fs     = require('fs');
@@ -168,10 +168,10 @@ var Fragment = function (path){
     };
 
     self.parse = function(callback){
-        console.log(self.path + " parse called");
+        console.log(src + '/' + self.path + " parse called");
         self.readyCB = callback;
         var fp = new FileParser();
-        fp.parseFile(path, fileParsedCB);
+        fp.parseFile(src + '/' + path, fileParsedCB);
     };
 
     self.debugString = function(childString){
@@ -188,6 +188,7 @@ var Fragment = function (path){
             return attach;
         };
         //if i have a populated body, process it.
+        //need to fix this deep control structure
         for(obj in self.body){
             if(self.body.hasOwnProperty(obj)){
                 for(iobj in self.body[obj]){
@@ -250,7 +251,7 @@ var Fragment = function (path){
     };
 };
 
-var root = new Fragment("./testtwo.html");
+var root = new Fragment("/testtwo.html");
 var rootCallback = function(){
     //use strict";
     console.log("im the parent");
