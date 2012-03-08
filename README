@@ -8,9 +8,13 @@ description:
 . simple batch templating tool.
 
 future:
+. read properties file instead of hardcoded stuff in render.js
 . convert to work with express as middleware.
 . convert to streaming
 
 npm modules required:
 . lazy (to read files)
 . colors (for the console)
+
+to run:
+node framework/render.js
