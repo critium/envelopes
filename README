@@ -18,3 +18,9 @@ npm modules required:
 
 to run:
 node framework/render.js
+
+how it works, how to use it:
+. envelopes only uses 2 keywords, "envelope", and "text"
+. the "envelope" keyword denotes that the template has an envelope file.
+. the "text" keyword denotes where the text on the file should be inserted.
+. envelopes will look for the keyword designated on the package page and insert it based on the key name into the envelope page.
